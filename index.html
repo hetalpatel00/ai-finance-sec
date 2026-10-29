@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Finance | Financial Analysis Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-icon">₣</span><div><strong>AI Finance</strong><small>Financial Analysis Studio</small></div></div>
+    <span class="demo-tag">EDUCATIONAL DEMO</span>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <div><p class="eyebrow">PERSONAL FINANCE ANALYTICS</p><h1>Understand your money.<br><span>Make informed decisions.</span></h1>
+      <p class="subtext">Explore investment value, returns, price movement and risk using transparent calculations.</p></div>
+      <div class="hero-mark">↗</div>
+    </section>
+
+    <section class="section-head"><div><p class="eyebrow">01 / PORTFOLIO INPUT</p><h2>Investment calculator</h2></div><button id="sampleBtn" class="secondary">Load sample data</button></section>
+    <section class="panel input-grid">
+      <label>Investment amount (₹)<input id="investment" type="number" min="1" value="50000"></label>
+      <label>Current value (₹)<input id="currentValue" type="number" min="0" value="56000"></label>
+      <label>Investment period (months)<input id="months" type="number" min="1" value="12"></label>
+      <label>Annual benchmark return (%)<input id="benchmark" type="number" value="8" step="0.1"></label>
+      <button id="analyzeBtn" class="primary full">Analyze my portfolio <span>→</span></button>
+    </section>
+
+    <section class="section-head"><div><p class="eyebrow">02 / KEY METRICS</p><h2>Your financial snapshot</h2></div><span class="live-label"><i></i> Calculated in your browser</span></section>
+    <section class="metric-grid">
+      <article class="metric-card"><p>Current portfolio value</p><strong id="metricValue">₹56,000</strong><small>Entered current value</small></article>
+      <article class="metric-card"><p>Profit / loss</p><strong id="metricPL" class="positive">+₹6,000</strong><small id="metricPLPct">+12.00% total return</small></article>
+      <article class="metric-card"><p>Annualized return</p><strong id="metricAnnual">12.00%</strong><small>Estimated from holding period</small></article>
+      <article class="metric-card"><p>Benchmark comparison</p><strong id="metricBenchmark">+4.00 pp</strong><small>Versus entered benchmark</small></article>
+    </section>
+
+    <section class="analysis-grid">
+      <article class="panel"><div class="panel-title"><div><p class="eyebrow">03 / VISUALIZATION</p><h3>Portfolio value comparison</h3></div><span class="chart-chip">₹ INR</span></div><canvas id="valueChart" height="220"></canvas><p class="note">Illustrative comparison of invested amount and entered current value.</p></article>
+      <article class="panel"><div class="panel-title"><div><p class="eyebrow">04 / RISK VIEW</p><h3>Illustrative monthly prices</h3></div><span class="chart-chip">Sample data</span></div><canvas id="priceChart" height="220"></canvas><p class="note">The sample price series is fictional and is not live market data.</p></article>
+    </section>
+
+    <section class="analysis-grid lower-grid">
+      <article class="panel"><p class="eyebrow">05 / RISK CALCULATION</p><h3>Sample price volatility</h3><div class="risk-number" id="volatility">18.4%<span> annualized</span></div><p class="note">Calculated as the standard deviation of sample monthly returns multiplied by √12. It is a historical-style illustration, not a prediction.</p><div class="risk-meter"><span id="riskMeter"></span></div><div class="meter-labels"><span>Lower variation</span><span>Higher variation</span></div></article>
+      <article class="panel insight-panel"><p class="eyebrow">AI-STYLE EXPLANATION</p><h3>Financial insights</h3><p class="note">Rule-based educational observations from your inputs; no external AI model is connected.</p><ul id="insights" class="insights"></ul></article>
+    </section>
+    <section class="disclaimer"><strong>Important:</strong> This is an educational project, not financial advice. The app uses values entered by the user and clearly labeled sample data. It does not fetch live prices or guarantee investment outcomes.</section>
+    <footer>AI Finance · SEC Web Application Project · Built for educational demonstration</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
