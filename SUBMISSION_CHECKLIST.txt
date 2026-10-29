@@ -1,0 +1,13 @@
+AI FINANCE SEC — SUBMISSION CHECKLIST
+
+[ ] Run index.html in Chrome
+[ ] Test positive and negative return inputs
+[ ] Capture your own screenshots into the screenshots folder
+[ ] Add your name, roll number, institution and academic year to report/PPT
+[ ] Update the report with actual screenshots and any changes you make
+[ ] Upload source files to GitHub
+[ ] Test GitHub Pages link if publishing online
+[ ] Rehearse a 3–5 minute demo
+[ ] Confirm the college's required report format and slide/page limits
+
+Do not submit placeholders as if they were real screenshots. The report and slides are editable templates; personalize and verify them before submission.
